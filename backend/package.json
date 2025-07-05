@@ -1,0 +1,28 @@
+{
+  "name": "redis-node-demo",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "express": "^4.21.2",
+    "redis": "^4.7.1"
+  },
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahilchaudhari2405/redis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahilchaudhari2405/redis/issues"
+  },
+  "homepage": "https://github.com/sahilchaudhari2405/redis#readme"
+}
