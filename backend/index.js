@@ -41,33 +41,9 @@ if (cluster.isPrimary) {
   await redisClient.connect();
   console.log('✅ Redis connected successfully!');
 
-  const allowedOrigins = [
-    'http://localhost:3000',
-    'http://localhost',
-    'http://client:80',
-    'http://apalabajar.shop',
-    'https://apalabajar.shop',
-    'http://www.apalabajar.shop',
-    'https://www.apalabajar.shop',
-    'http://65.0.98.146',
-    test,
-  ];
 
-  app.use(cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-      return callback(new Error('CORS policy does not allow this origin'), false);
-    },
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-  }));
 
-  app.use(express.json({ limit: '100mb' }));
-  app.use(bodyParser.urlencoded({ extended: false }));
-  app.use(bodyParser.json());
+
 
   // Set request timeout
   app.use((req, res, next) => {
