@@ -66,7 +66,6 @@ if (cluster.isPrimary) {
   }));
 
   app.use(express.json({ limit: '100mb' }));
-  app.use(cookieParser());
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
 
